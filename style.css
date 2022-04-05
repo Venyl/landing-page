@@ -98,7 +98,50 @@ a {
     display: grid;
     flex-basis: 30%;
     margin: 0 auto;
-    background: grey;
+    background: #4b5563;
     place-items: center;
     aspect-ratio: 16 / 9;
 }
+
+article {
+    display: grid;
+    min-height: 30em;
+    padding: 1rem min(8vw, 20em);
+    place-items: center;
+}
+
+article > h1 {
+    font-size: 3em;
+    color: var(--dark);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    gap: 7rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.card > p {
+    flex-grow: 1;
+    text-align: center;
+    color: #4b5563;
+    justify-self: flex-start;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: .5rem;
+    outline: .3rem solid var(--accent);
+    aspect-ratio: 1;
+}
+
