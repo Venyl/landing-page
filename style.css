@@ -92,6 +92,7 @@ a {
 .hero-secondary {
     font-size: 1.2rem;
     color: var(--secondary);
+    margin-block: 1rem;
 }
 
 .btn {
