@@ -21,8 +21,20 @@ body {
 
 header,
 article,
-.quote {
+.quote,
+.call-to-action,
+footer {
     padding: 1rem min(8vw, 20em);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }
 
 header {
@@ -87,7 +99,7 @@ a {
     font-weight: 600;
     padding: .5em 1.5em;
     cursor: pointer;
-    transition: background 200ms ease-in;
+    transition: background 200ms ease-in, color 200ms ease-in;
     color: inherit;
     border: 0;
     border-radius: .5em;
@@ -135,6 +147,16 @@ article > h1 {
     gap: .5rem;
 }
 
+.select-dark-text::selection {
+    color: var(--primary);
+    background: var(--dark);
+}
+
+.select-light-text::selection {
+    color: var(--dark);
+    background: var(--primary);
+}
+
 .card > p {
     flex-grow: 1;
     text-align: center;
@@ -169,3 +191,49 @@ blockquote {
     text-align: right;
 }
 
+.call-to-action {
+    display: grid;
+    margin: 5rem 0;
+    place-items: center;
+}
+
+.container-text > *::selection {
+    color: var(--accent);
+    background: var(--primary);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 3rem 10rem;
+    color: var(--primary);
+    border-radius: .5em;
+    background: var(--accent);
+}
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-text > p {
+    font-weight: 300;
+}
+
+.btn-invert {
+    outline: .2rem solid var(--primary);
+}
+
+.btn-invert:hover {
+    color: var(--accent);
+    background: var(--primary);
+}
+
+footer {
+    display: grid;
+    color: var(--primary);
+    background: var(--dark);
+    place-items: center;
+    padding-block: 2rem;
+}
