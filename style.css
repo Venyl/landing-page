@@ -1,1 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --dark: #1F2937;
+    --primary: #F9FAF8;
+    --secondary: #E5E7Eb;
+    --accent: #3882F6;
+}
+
+
+body {
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    min-height: 30rem;
+    padding: 1rem min(8vw, 20em);
+    color: var(--primary);
+    background: var(--dark);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--secondary);
+    gap: 1em;
+}
+
+.nav-links > a {
+    padding: .5em .75em;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    border-radius: .5em;
+}
+
+.nav-links > a:hover {
+    color: var(--dark);
+    background: var(--primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero > * {
+    flex-basis: 50%;
+}
+
+.hero-main {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-secondary {
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+.btn {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: .5em 1.5em;
+    cursor: pointer;
+    transition: background 200ms ease-in;
+    color: inherit;
+    border: 0;
+    border-radius: .5em;
+    outline: 0;
+    background: var(--accent);
+}
+
+.btn:hover {
+    background: #2862B6;
+}
+
+.header-image-wrapper {
+    display: grid;
+    flex-basis: 30%;
+    margin: 0 auto;
+    background: grey;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+}
